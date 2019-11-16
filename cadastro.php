@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Cadastro</title>
 
     <link href="static/css/fonts.css" rel="stylesheet">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet"/>
@@ -14,6 +14,7 @@
     <link href="static/css/bootstrap.css" rel="stylesheet">
     <link href="static/css/bootstrap-grid.css" rel="stylesheet">
     <link href="static/css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
     <body>
         <video autoplay muted loop id="myVideo">
@@ -23,10 +24,8 @@
         
         <div class="content">
             <div class="border-bottom border-white">
-                <h1 class="title-opaque">POST IT!</h1>
+                <h1 class="title-opaque-sign">Sign In</h1>
             </div>
-            <br>
-            <p>Faça upload de suas imagens para web!!</p>
             <br>
             <br>
             <div class="d-flex justify-content-center">
@@ -42,23 +41,24 @@
                             <label for="InputPasswordLabel">Senha</label>
                             <input type="password" id="InputPassword" placeholder="Digite sua senha">
                         </div>
+                        <div>
+                            <label for="InputPasswordLabel">Repita a Senha</label>
+                            <input type="password" id="InputPassword" placeholder="Repita sua senha">
+                        </div>
                         <br>
                         <br>
                         <br>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" id="button-login">Login</button>
+                            <button type="submit" id="button-login">Cadastrar-se</button>
                         </div>
                         <br>
                     </form>
                     <div class="d-flex justify-content-center">
                         <div class="d-flex flex-column">
-                            <label for="InputEmailLabel"> Ainda não se cadastrou?</label>
-                            <a href="cadastro.php"><button id="button-sign">Cadastre-se</button></a>
+                            <label for="InputEmailLabel"> Já possui cadastro?</label>
+                            <a href="index.php"><button id="button-sign">Login</button></a>
                         </div>
                     </div>
-                    <div class="d-flex flex-column">
-                            <a href="home.php"><button id="button-sign">LOGIN TEMP</button></a>
-                        </div>
                     <br>
                     <br>
                     <br>
@@ -75,3 +75,4 @@
 <script src="static/js/bootstrap-table-pt-BR.min.js"></script>
 <script src="static/js/bootstrap.bundle.js"></script>
 <script src="static/js/bootstrap.js"></script>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>

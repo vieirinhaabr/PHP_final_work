@@ -28,14 +28,24 @@
   padding: 20px;
 }
 
-#myBtn {
+#button-login {
   width: 200px;
   font-size: 18px;
   padding: 10px;
   border: none;
+  cursor: pointer;
+  background: #397ecc;
+  color: #fff;
+}
+
+#button-sign {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
   background: #d11b1b;
   color: #fff;
-  cursor: pointer;
 }
 
 input {
@@ -44,8 +54,10 @@ input {
 
 .title-opaque{
   font-size: 100px;
+  color: white;
 }
 
-.foot-border{
-  border-bottom: 2px white;
+.title-opaque-sign{
+  font-size: 60px;
+  color: white;
 }
