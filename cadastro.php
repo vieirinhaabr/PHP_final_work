@@ -10,6 +10,7 @@
     <link href="static/css/fonts.css" rel="stylesheet">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet"/>
     <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/style_loading.css" rel="stylesheet">
     <link href="static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
     <link href="static/css/bootstrap.css" rel="stylesheet">
@@ -18,6 +19,7 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
     <body onload="write_on_usertype('Selecione')">
+        <!-- <div id="loading"></div> -->
         <video autoplay muted loop id="myVideo">
             <source src="content/background.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
@@ -47,10 +49,10 @@
                             <input type="password" id="InputPassword" placeholder="Repita sua senha">
                         </div>
                         <div>
-                            <label for="InputRepeatPasswordLabel">Digite seu CPF ou CNPJ</label>
+                            <label for="InputRepeatPasswordLabel">CPF ou CNPJ</label>
                             <div class="d-flex align-items-start">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="user-type-span"></span></button>
+                                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="user-type-span"></span></button>
                                     <div class="dropdown-menu">
                                         <a href="javascript: write_on_usertype('CPF')" class="dropdown-item">CPF</a>
                                         <a href="javascript: write_on_usertype('CNPJ')" class="dropdown-item">CNPJ</a>

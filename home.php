@@ -16,17 +16,12 @@
     <link href="static/css/bootstrap.css" rel="stylesheet">
     <link href="static/css/bootstrap-grid.css" rel="stylesheet">
     <link href="static/css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
     <body>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
-        <div class="page">
-            <h1>The standard Lorem Ipsum passage</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="loading"></div>
+        
+        <!-- <div id="loading"></div> -->
     </body>
 </html>
 
