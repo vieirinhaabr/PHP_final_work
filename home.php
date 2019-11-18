@@ -10,7 +10,7 @@
 
     <link href="static/css/fonts.css" rel="stylesheet">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet"/>
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/style_loading.css" rel="stylesheet">
     <link href="static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
     <link href="static/css/bootstrap.css" rel="stylesheet">
@@ -19,7 +19,14 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
     <body>
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+        <div class="page">
+            <h1>The standard Lorem Ipsum passage</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div id="loading"></div>
     </body>
 </html>
 
@@ -31,6 +38,26 @@
 <script src="static/js/bootstrap.bundle.js"></script>
 <script src="static/js/bootstrap.js"></script>
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>
+    function onReady(callback) {
+        var intervalId = window.setInterval(function() {
+            if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalId);
+            callback.call(this);
+            }
+        }, 1000);
+    }
+
+    function setVisible(selector, visible) {
+        document.querySelector(selector).style.display = visible ? 'block' : 'none';
+    }
+
+    onReady(function() {
+        setVisible('.page', true);
+        setVisible('#loading', false);
+    });
+
+</script>
 
 <?php
 

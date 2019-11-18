@@ -17,7 +17,7 @@
     <link href="static/css/bootstrap-reboot.css" rel="stylesheet">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
-    <body>
+    <body onload="write_on_usertype('Selecione')">
         <video autoplay muted loop id="myVideo">
             <source src="content/background.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
@@ -25,7 +25,7 @@
         
         <div class="content">
             <div class="border-bottom border-white">
-                <h1 class="title-opaque-sign">Sign In</h1>
+                <h1 class="title-opaque-sign">Cadastro</h1>
             </div>
             <br>
             <br>
@@ -50,7 +50,7 @@
                             <label for="InputRepeatPasswordLabel">Digite seu CPF ou CNPJ</label>
                             <div class="d-flex align-items-start">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRINT PHP</button>
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="user-type-span"></span></button>
                                     <div class="dropdown-menu">
                                         <a href="javascript: write_on_usertype('CPF')" class="dropdown-item">CPF</a>
                                         <a href="javascript: write_on_usertype('CNPJ')" class="dropdown-item">CNPJ</a>
@@ -114,6 +114,6 @@
 				return cpf
             }
             function write_on_usertype(usertype){
-                $('#spanId').text(i);
+                $('#user-type-span').text(usertype);
             }
 		</script>
