@@ -47,13 +47,22 @@
                             <input type="password" id="InputPassword" placeholder="Repita sua senha">
                         </div>
                         <div>
-                            <label for="InputRepeatPasswordLabel">Digite seu CPF/CNPJ</label>
-                            <input type="text" id="cadtipoinput" placeholder="Digite seu cpf/cnpj" maxlength="14">
+                            <label for="InputRepeatPasswordLabel">Digite seu CPF ou CNPJ</label>
+                            <div class="d-flex align-items-start">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRINT PHP</button>
+                                    <div class="dropdown-menu">
+                                        <a href="javascript: write_on_usertype('CPF')" class="dropdown-item">CPF</a>
+                                        <a href="javascript: write_on_usertype('CNPJ')" class="dropdown-item">CNPJ</a>
+                                    </div>
+                                </div>
+                                <input type="text" id="cadtipoinput" style="padding-left: 10px;" placeholder="Digite seu cpf/cnpj" onkeydown="javascript: fMasc( this, mCPF );">
+                            </div>
                         </div>
                         <br>
                         <br>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" id="button-login">Cadastrar-se</button>
+                            <button type="submit" id="button-login">Finalizar cadastro</button>
                         </div>
                         <br>
                     </form>
@@ -80,3 +89,31 @@
 <script src="static/js/bootstrap.bundle.js"></script>
 <script src="static/js/bootstrap.js"></script>
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script type="text/javascript">
+			function fMasc(objeto,mascara) {
+				obj=objeto
+				masc=mascara
+				setTimeout("fMascEx()",1)
+			}
+			function fMascEx() {
+				obj.value=masc(obj.value)
+			}
+			function mCNPJ(cnpj){
+				cnpj=cnpj.replace(/\D/g,"")
+				cnpj=cnpj.replace(/^(\d{2})(\d)/,"$1.$2")
+				cnpj=cnpj.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
+				cnpj=cnpj.replace(/\.(\d{3})(\d)/,".$1/$2")
+				cnpj=cnpj.replace(/(\d{4})(\d)/,"$1-$2")
+				return cnpj
+			}
+			function mCPF(cpf){
+				cpf=cpf.replace(/\D/g,"")
+				cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+				cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+				cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+				return cpf
+            }
+            function write_on_usertype(usertype){
+                $('#spanId').text(i);
+            }
+		</script>

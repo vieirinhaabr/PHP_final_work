@@ -31,7 +31,7 @@
           <li><a id="menu-item" href="sair.php">Sair</a></li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>
-          <li><a id="menu-item" href="login.php">Login</a></li>
+          <li><a id="menu-item" href="index.php">Login</a></li>
         <?php endif; ?>
        
       </ul>
@@ -45,7 +45,7 @@
           <li><a id="menu-item" href="sair.php">Sair</a></li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>
-          <li><a id="menu-item" href="login.php">Login</a></li>
+          <li><a id="menu-item" href="index.php">Login</a></li>
         <?php endif; ?>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
