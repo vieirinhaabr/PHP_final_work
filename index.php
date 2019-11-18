@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/andriod-app-logo/32/icon_p-128.png">
 
     <link href="static/css/fonts.css" rel="stylesheet">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet"/>
@@ -57,9 +58,8 @@
                         </div>
                     </div>
                     <div class="d-flex flex-column">
-                            <a href="home.php"><button id="button-sign">LOGIN TEMP</button></a>
+                            <a href="home.php"><button>LOGIN TEMP</button></a>
                         </div>
-                    <br>
                     <br>
                     <br>
                 </div>

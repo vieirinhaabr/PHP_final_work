@@ -61,3 +61,12 @@ input {
   font-size: 60px;
   color: white;
 }
+
+.postit-logo{
+  border-bottom: 2px white !important;
+}
+
+#menu-item:hover{
+  color: lightblue;
+  text-decoration: none;
+}

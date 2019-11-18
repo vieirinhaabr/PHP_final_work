@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastro</title>
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/andriod-app-logo/32/icon_p-128.png">
 
     <link href="static/css/fonts.css" rel="stylesheet">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet"/>
@@ -42,10 +43,13 @@
                             <input type="password" id="InputPassword" placeholder="Digite sua senha">
                         </div>
                         <div>
-                            <label for="InputPasswordLabel">Repita a Senha</label>
+                            <label for="InputRepeatPasswordLabel">Repita a Senha</label>
                             <input type="password" id="InputPassword" placeholder="Repita sua senha">
                         </div>
-                        <br>
+                        <div>
+                            <label for="InputRepeatPasswordLabel">Digite seu CPF/CNPJ</label>
+                            <input type="text" id="cadtipoinput" placeholder="Digite seu cpf/cnpj" maxlength="14">
+                        </div>
                         <br>
                         <br>
                         <div class="d-flex justify-content-center">
@@ -55,7 +59,7 @@
                     </form>
                     <div class="d-flex justify-content-center">
                         <div class="d-flex flex-column">
-                            <label for="InputEmailLabel"> Já possui cadastro?</label>
+                            <label for="EmailLabel"> Já possui cadastro?</label>
                             <a href="index.php"><button id="button-sign">Login</button></a>
                         </div>
                     </div>
