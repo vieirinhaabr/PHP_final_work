@@ -32,7 +32,7 @@
             <br>
             <br>
             <div class="d-flex justify-content-center">
-                <div class="d-flex flex-column">
+                <div class="cadastro-menu">
                     <form>
                         <div>
                             <label for="InputEmailLabel">Email</label>
@@ -58,7 +58,7 @@
                                         <a href="javascript: write_on_usertype('CNPJ')" class="dropdown-item">CNPJ</a>
                                     </div>
                                 </div>
-                                <input type="text" id="cadtipoinput" style="padding-left: 10px;" placeholder="Digite seu cpf/cnpj" onkeydown="javascript: fMasc( this, mCPF );">
+                                <div style="padding-left: 20px;" id="div-input-cpf-cnpj" class="div-input-cpf-cnpj"></div>
                             </div>
                         </div>
                         <br>
@@ -91,31 +91,4 @@
 <script src="static/js/bootstrap.bundle.js"></script>
 <script src="static/js/bootstrap.js"></script>
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-<script type="text/javascript">
-			function fMasc(objeto,mascara) {
-				obj=objeto
-				masc=mascara
-				setTimeout("fMascEx()",1)
-			}
-			function fMascEx() {
-				obj.value=masc(obj.value)
-			}
-			function mCNPJ(cnpj){
-				cnpj=cnpj.replace(/\D/g,"")
-				cnpj=cnpj.replace(/^(\d{2})(\d)/,"$1.$2")
-				cnpj=cnpj.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
-				cnpj=cnpj.replace(/\.(\d{3})(\d)/,".$1/$2")
-				cnpj=cnpj.replace(/(\d{4})(\d)/,"$1-$2")
-				return cnpj
-			}
-			function mCPF(cpf){
-				cpf=cpf.replace(/\D/g,"")
-				cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
-				cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
-				cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
-				return cpf
-            }
-            function write_on_usertype(usertype){
-                $('#user-type-span').text(usertype);
-            }
-		</script>
+<script src="static/js/validator.js"></script>
