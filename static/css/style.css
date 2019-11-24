@@ -48,6 +48,26 @@
   color: #397ecc;
 }
 
+.button-upload {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #397ecc;
+  color: #fff;
+}
+
+.button-upload:hover {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  color: #397ecc;
+}
+
 #button-sign {
   width: 200px;
   font-size: 18px;
@@ -139,10 +159,10 @@ body{
 }
 
 .thumbnail{
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 300px;
   padding: 2px;
-  border: 10px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 3px;
 }
 

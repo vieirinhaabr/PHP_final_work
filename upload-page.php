@@ -58,7 +58,8 @@
                         <div class="d-flex justify-content-center">
                             <h6 style="color: white; padding-bottom: 10%;"> Selecione o arquivo pelo explorer </h6>
                         </div>
-                        <button id="button-login"> Escolher </button>
+                        <button id="uploadfile-button" class="button-upload"> Escolher </button>
+                        <input type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
                     </div>
                 </div>
             </div>

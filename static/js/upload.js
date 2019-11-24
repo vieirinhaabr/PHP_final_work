@@ -39,7 +39,7 @@ $(function() {
     });
 
     // Open file selector on div click
-    $("#uploadfile").click(function(){
+    $("#uploadfile-button").click(function(){
         $("#file").click();
     });
 
@@ -74,7 +74,7 @@ $(function() {
     // Added thumbnail
     function addThumbnail(data){
     $("#uploadfile #content-align #joke-text").remove(); 
-    var len = $("#uploadfile div.thumbnail").length;
+    var len = $("#content-align div.thumbnail").length;
 
     var num = Number(len);
     num = num + 1;
@@ -84,10 +84,11 @@ $(function() {
     var src = data.src;
 
     // Creating an thumbnail
-    $("#uploadfile").append('<div id="thumbnail_'+num+'" class="thumbnail d-flex flex-column"></div>');
+    $("#content-align").append('<div id="thumbnail_'+num+'" style="margin-bottom: 0px; margin-left: 5px; margin-right: 5px; padding: 4px;" class="thumbnail d-flex flex-column"></div>');
     $("#thumbnail_"+num).append('<img src="'+src+'" width="100%" height="78%">');
     $("#thumbnail_"+num).append('<span class="name">'+name+'<span>');
     $("#thumbnail_"+num).append('<span class="size">'+size+'<span>');
+    $("#thumbnail_"+num).append('<img style="margin: auto;" src="https://cdn2.iconfinder.com/data/icons/information-notification-thin-outline/3/11-512.png" width="90%" height="68%">');
 
     }
 
