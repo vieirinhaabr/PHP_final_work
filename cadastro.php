@@ -76,7 +76,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="d-flex flex-column">
                             <label for="EmailLabel"> Já possui cadastro?</label>
-                            <a href="index.php"><button id="button-sign">Login</button></a>
+                            <a href="login.php"><button id="button-sign">Login</button></a>
                         </div>
                     </div>
                     <br>

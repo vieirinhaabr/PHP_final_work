@@ -30,12 +30,28 @@ $(function() {
 
         $("#h4-joke-text").text("Realizando upload");
 
+        var extension = '';
         var file = e.originalEvent.dataTransfer.files;
-        var fd = new FormData();
 
-        fd.append('file', file[0]);
+        for (let index = 0; index < file[0].type.length; index++) {
+            if (file[0].type[index] != '/'){
+                extension += file[0].type[index];
+            }
+            else{
+                index = file[0].type.length;
+            }
+        }
 
-        uploadData(fd);
+        if (extension == 'image'){
+            var fd = new FormData();
+
+            fd.append('file', file[0]);
+
+            uploadData(fd);
+        }
+        else{
+            alert("O arquivo enviado não é uma imagem, ou não é suportado pelo POST IT !!!");
+        }
     });
 
     // Open file selector on div click
@@ -100,7 +116,6 @@ $(function() {
                 name_modified += name[index];
             }
             for (let index = 0; index < name.length; index++) {
-                console.log(name[index]);
                 if (name[index] == '.'){
                     for (let index_intern = index; index_intern < name.length; index_intern++) {
                         name_modified += name[index_intern];

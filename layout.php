@@ -25,27 +25,27 @@
         <li><a id="menu-item" href="home.php">Home</a></li>
 
         <?php if (isset($_SESSION["idusuario"])): ?>
-          <li><a id="menu-item" href="browse-images.php">Ver galeria</a></li>
-          <li><a id="menu-item" href="upload.php">Upload</a></li>
+          <li><a id="menu-item" href="galery.php">Ver galeria</a></li>
+          <li><a id="menu-item" href="upload-page.php">Upload</a></li>
           <li><a id="menu-item" href="usuario.php">Usuario</a></li>
           <li><a id="menu-item" href="sair.php">Sair</a></li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>
-          <li><a id="menu-item" href="index.php">Login</a></li>
+          <li><a id="menu-item" href="login.php">Login</a></li>
         <?php endif; ?>
        
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="home.php">Home</a></li>
         <?php if (isset($_SESSION["idusuario"])): ?>
-          <li><a id="menu-item" href="browse-images.php">Ver galeria</a></li>
-          <li><a id="menu-item" href="upload.php">Upload</a></li>
+          <li><a id="menu-item" href="galery.php">Ver galeria</a></li>
+          <li><a id="menu-item" href="upload-page.php">Upload</a></li>
           <li><a id="menu-item" href="usuario.php">Usuario</a></li>
           <li><a id="menu-item" href="sair.php">Sair</a></li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>
-          <li><a id="menu-item" href="index.php">Login</a></li>
+          <li><a id="menu-item" href="login.php">Login</a></li>
         <?php endif; ?>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -67,7 +67,7 @@
     <footer class="page-footer fixed-bottom light-blue">
       <div class="footer-copyright">
         <div class="container">
-          Lorem ipsum
+          @POST IT 2019
         </div>
       </div>
     </footer>

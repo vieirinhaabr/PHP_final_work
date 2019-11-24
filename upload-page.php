@@ -31,7 +31,7 @@
                     <p style="color:white;">Faça upload de suas imagens para o Post It</p>
                 </div>
             </div>
-            <div style="width: 100%; height: 450px; border-style: hidden; border-radius: 0px;" class="border-upload d-flex justify-content-center">
+            <div style="width: 100%; height: 450px; border-style: hidden; border-radius: 0px;" class="border-upload row justify-content-center">
                 <div style="width: 45%; height: 350px; margin: auto; border-color: white;" class="border-upload d-flex flex-column">
                     <div class="upload-area d-flex justify-content-center"  id="uploadfile" style="margin: auto;">
                         <div id="content-align" style="margin: auto;" class="d-flex justify-content-center">
@@ -59,7 +59,7 @@
                             <h6 style="color: white; padding-bottom: 10%;"> Selecione o arquivo pelo explorer </h6>
                         </div>
                         <button id="uploadfile-button" class="button-upload"> Escolher </button>
-                        <input type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                        <input type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple accept='image/*'/>
                     </div>
                 </div>
             </div>
