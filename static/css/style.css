@@ -38,6 +38,16 @@
   color: #fff;
 }
 
+#button-login:hover {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  color: #397ecc;
+}
+
 #button-sign {
   width: 200px;
   font-size: 18px;
@@ -46,6 +56,16 @@
   cursor: pointer;
   background: #d11b1b;
   color: #fff;
+}
+
+#button-sign:hover {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  color: #d11b1b;
 }
 
 input {
@@ -92,4 +112,21 @@ body{
 }
 .container-carousel{
   max-width: 100%;
+}
+.border-upload{
+  background-color: #494949;
+  border-radius: 30px;
+  border-width: 8px;
+  border-style: solid;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
 }
