@@ -21,6 +21,43 @@ function CPF(cpf){
     cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
     return cpf
 }
+
+function credential_validator_cpf(objeto){
+    credential = objeto.value;
+
+    document.getElementById('div-small-cpf-cnpj').innerHTML = "";
+
+    if (credential != undefined){
+        if (credential.length != 14){
+            const div = document.createElement('div');
+            div.className = 'row';
+            div.innerHTML = `<small id="emailHelp" class="form-text red-text">Credencial incompleta!!!</small>`;
+            document.getElementById('div-small-cpf-cnpj').appendChild(div);
+        }
+        else{
+            document.getElementById('div-small-cpf-cnpj').innerHTML = "";
+        }
+    }
+}
+
+function credential_validator_cnpj(objeto){
+    credential = objeto.value;
+
+    document.getElementById('div-small-cpf-cnpj').innerHTML = "";
+
+    if (credential != undefined){
+        if (credential.length != 20){
+            const div = document.createElement('div');
+            div.className = 'row';
+            div.innerHTML = `<small id="emailHelp" class="form-text red-text">Credencial incompleta!!!</small>`;
+            document.getElementById('div-small-cpf-cnpj').appendChild(div);
+        }
+        else{
+            document.getElementById('div-small-cpf-cnpj').innerHTML = "";
+        }
+    }
+}
+
 function write_on_usertype(usertype){
     $('#user-type-span').text(usertype);
 
@@ -30,13 +67,13 @@ function write_on_usertype(usertype){
         if (usertype == 'CPF'){
             const div = document.createElement('div');
             div.className = 'row';
-            div.innerHTML = `<input type="text" id="cadtipoinput" style="padding-left: 10px;" maxlength="14" placeholder="Digite seu cpf/cnpj" onkeydown="javascript: fMasc( this, CPF );">`;
+            div.innerHTML = `<input type="text" id="cadtipoinput" style="padding-left: 10px;" minlength="14" maxlength="14" placeholder="Digite seu cpf" onkeydown="javascript: fMasc( this, CPF ); credential_validator_cpf( this );">`;
             document.getElementById('div-input-cpf-cnpj').appendChild(div);
         }
         else if (usertype == 'CNPJ'){
             const div = document.createElement('div');
             div.className = 'row';
-            div.innerHTML = `<input type="text" id="cadtipoinput" style="padding-left: 10px;" maxlength="20" placeholder="Digite seu cpf/cnpj" onkeydown="javascript: fMasc( this, CNPJ );">`;
+            div.innerHTML = `<input type="text" id="cadtipoinput" style="padding-left: 10px;" minlength="20" maxlength="20" placeholder="Digite seu cnpj" onkeydown="javascript: fMasc( this, CNPJ ); credential_validator_cnpj( this );">`;
             document.getElementById('div-input-cpf-cnpj').appendChild(div);
         }
     }

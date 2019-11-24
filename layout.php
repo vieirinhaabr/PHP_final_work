@@ -25,8 +25,8 @@
         <li><a id="menu-item" href="home.php">Home</a></li>
 
         <?php if (isset($_SESSION["idusuario"])): ?>
-          <li><a id="menu-item" href="categoria.php">Categoria</a></li>
-          <li><a id="menu-item" href="produto.php">Produto</a></li>
+          <li><a id="menu-item" href="browse-images.php">Ver galeria</a></li>
+          <li><a id="menu-item" href="upload.php">Upload</a></li>
           <li><a id="menu-item" href="usuario.php">Usuario</a></li>
           <li><a id="menu-item" href="sair.php">Sair</a></li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
@@ -39,9 +39,9 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="index.php">Home</a></li>
         <?php if (isset($_SESSION["idusuario"])): ?>
-          <li><a id="menu-item" href="categoria.php">Categoria</a></li>
+          <li><a id="menu-item" href="browse-images.php">Ver galeria</a></li>
+          <li><a id="menu-item" href="upload.php">Upload</a></li>
           <li><a id="menu-item" href="usuario.php">Usuario</a></li>
-          <li><a id="menu-item" href="produto.php">Produto</a></li>
           <li><a id="menu-item" href="sair.php">Sair</a></li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>

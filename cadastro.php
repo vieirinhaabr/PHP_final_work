@@ -41,25 +41,30 @@
                         </div>
                         <br>
                         <div>
+                            <label for="InputNameLabel">Nome (Apelido)</label>
+                            <input type="text" minlength="5" id="InputNome" aria-describedby="nomeHelp" placeholder="Digite seu nome">
+                        </div>
+                        <div>
                             <label for="InputPasswordLabel">Senha</label>
-                            <input type="password" id="InputPassword" placeholder="Digite sua senha">
+                            <input type="password" minlength="5" id="InputPassword" placeholder="Digite sua senha">
                         </div>
                         <div>
                             <label for="InputRepeatPasswordLabel">Repita a Senha</label>
-                            <input type="password" id="InputPassword" placeholder="Repita sua senha">
+                            <input type="password" minlength="5" id="InputRepeatPassword" placeholder="Repita sua senha">
                         </div>
                         <div>
                             <label for="InputRepeatPasswordLabel">CPF ou CNPJ</label>
                             <div class="d-flex align-items-start">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="user-type-span"></span></button>
+                                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="user-type-span" class="user-type-span"></span></button>
                                     <div class="dropdown-menu">
                                         <a href="javascript: write_on_usertype('CPF')" class="dropdown-item">CPF</a>
                                         <a href="javascript: write_on_usertype('CNPJ')" class="dropdown-item">CNPJ</a>
                                     </div>
                                 </div>
-                                <div style="padding-left: 20px;" id="div-input-cpf-cnpj" class="div-input-cpf-cnpj"></div>
+                                <div style="padding-left: 20px; margin-bottom: -15px;" id="div-input-cpf-cnpj" class="div-input-cpf-cnpj"></div>
                             </div>
+                            <div style="padding-left: 22%;" id="div-small-cpf-cnpj" class="div-small-cpf-cnpj"></div>
                         </div>
                         <br>
                         <br>
