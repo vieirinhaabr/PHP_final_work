@@ -27,8 +27,8 @@
         <?php if (isset($_SESSION["idusuario"])): ?>
           <li><a id="menu-item" href="galery.php">Ver galeria</a></li>
           <li><a id="menu-item" href="upload-page.php">Upload</a></li>
-          <li><a id="menu-item" href="usuario.php">Usuario</a></li>
-          <li><a id="menu-item" href="sair.php">Sair</a></li>
+          <li><a id="menu-item" href="control/usuario/sair.php">Sair</a></li>
+          <li>    </li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>
           <li><a id="menu-item" href="login.php">Login</a></li>
@@ -41,8 +41,8 @@
         <?php if (isset($_SESSION["idusuario"])): ?>
           <li><a id="menu-item" href="galery.php">Ver galeria</a></li>
           <li><a id="menu-item" href="upload-page.php">Upload</a></li>
-          <li><a id="menu-item" href="usuario.php">Usuario</a></li>
-          <li><a id="menu-item" href="sair.php">Sair</a></li>
+          <li><a id="menu-item" href="control/usuario/sair.php">Sair</a></li>
+          <li>    </li>
           <li>Bem vindo <?= $_SESSION["nome"] ?></li>
         <?php else: ?>
           <li><a id="menu-item" href="login.php">Login</a></li>
@@ -78,9 +78,6 @@
   <script src="static/js/bootstrap-table-materialize.min.js"></script>
   
   <script src="static/js/bootstrap-table-pt-BR.min.js"></script>
-  <script src="static/js/init.js"></script>
-  <script src='static/js/categoria.js'></script>
   <script src='static/js/usuario.js'></script>
-  <script src='static/js/produto.js'></script>
   </body>
 </html>

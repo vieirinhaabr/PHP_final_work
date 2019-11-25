@@ -32,16 +32,16 @@
             <br>
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column">
-                    <form>
+                    <form method="post" action="/git/PHP_final_work/control/usuario/login.php" id="formularioLogin">
                         <div>
                             <label for="InputEmailLabel">Email</label>
-                            <input type="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Digite seu email">
+                            <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
                             <small id="emailHelp" class="form-text text-muted">Você não deve compatilhar seu email com ninguém.</small>
                         </div>
                         <br>
                         <div>
                             <label for="InputPasswordLabel">Senha</label>
-                            <input type="password" id="InputPassword" placeholder="Digite sua senha">
+                            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
                         </div>
                         <br>
                         <br>
@@ -57,9 +57,6 @@
                             <a href="cadastro.php"><button id="button-sign">Cadastre-se</button></a>
                         </div>
                     </div>
-                    <div class="d-flex flex-column">
-                            <a href="home.php"><button>LOGIN TEMP</button></a>
-                        </div>
                     <br>
                     <br>
                 </div>

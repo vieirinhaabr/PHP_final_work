@@ -33,24 +33,25 @@
             <br>
             <div class="d-flex justify-content-center">
                 <div class="cadastro-menu">
-                    <form>
+                    <form method="post" action="/git/PHP_final_work/control/usuario/salvar.php" id="formularioUsuario">
+                        <input id="codigo" name="codigo" id="codigo" type="hidden">
                         <div>
                             <label for="InputEmailLabel">Email</label>
-                            <input type="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Digite seu email">
+                            <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
                             <small id="emailHelp" class="form-text text-muted">Você não deve compatilhar seu email com ninguém.</small>
                         </div>
                         <br>
                         <div>
                             <label for="InputNameLabel">Nome (Apelido)</label>
-                            <input type="text" minlength="5" id="InputNome" aria-describedby="nomeHelp" placeholder="Digite seu nome">
+                            <input type="text" minlength="5" id="nome" name="nome" aria-describedby="nomeHelp" placeholder="Digite seu nome">
                         </div>
                         <div>
                             <label for="InputPasswordLabel">Senha</label>
-                            <input type="password" minlength="5" id="InputPassword" placeholder="Digite sua senha">
+                            <input type="password" minlength="5" id="senha" name="senha" placeholder="Digite sua senha">
                         </div>
                         <div>
                             <label for="InputRepeatPasswordLabel">Repita a Senha</label>
-                            <input type="password" minlength="5" id="InputRepeatPassword" placeholder="Repita sua senha">
+                            <input type="password" minlength="5" id="repetesenha" name="repetesenha" placeholder="Repita sua senha">
                         </div>
                         <div>
                             <label for="InputRepeatPasswordLabel">CPF ou CNPJ</label>
@@ -69,7 +70,7 @@
                         <br>
                         <br>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" id="button-login">Finalizar cadastro</button>
+                            <a href="login.php"><button type="submit" id="button-login">Finalizar cadastro</button></a>
                         </div>
                         <br>
                     </form>
