@@ -18,7 +18,7 @@
     <link href="static/css/bootstrap-reboot.css" rel="stylesheet">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
-    <body onload="write_on_usertype('Selecione')">
+    <body onload="write_on_usertype('CPF')">
         <!-- <div id="loading"></div> -->
         <video autoplay muted loop id="myVideo">
             <source src="content/background.mp4" type="video/mp4">
@@ -37,21 +37,19 @@
                         <input id="codigo" name="codigo" id="codigo" type="hidden">
                         <div>
                             <label for="InputEmailLabel">Email</label>
-                            <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                            <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email" required>
                             <small id="emailHelp" class="form-text text-muted">Você não deve compatilhar seu email com ninguém.</small>
                         </div>
                         <br>
                         <div>
                             <label for="InputNameLabel">Nome (Apelido)</label>
-                            <input type="text" minlength="5" id="nome" name="nome" aria-describedby="nomeHelp" placeholder="Digite seu nome">
+                            <input type="text" minlength="5" id="nome" name="nome" aria-describedby="nomeHelp" placeholder="Digite seu nome" required>
                         </div>
                         <div>
                             <label for="InputPasswordLabel">Senha</label>
-                            <input type="password" minlength="5" id="senha" name="senha" placeholder="Digite sua senha">
+                            <input type="password" minlength="5" id="senha" name="senha" placeholder="Digite sua senha" required>
                         </div>
-                        <div>
-                            <label for="InputRepeatPasswordLabel">Repita a Senha</label>
-                            <input type="password" minlength="5" id="repetesenha" name="repetesenha" placeholder="Repita sua senha">
+                        <div id="usertype" class="usertype">
                         </div>
                         <div>
                             <label for="InputRepeatPasswordLabel">CPF ou CNPJ</label>

@@ -1,16 +1,16 @@
+drop database postit;
+
 create database postit;
 use postit;
 
 create table `pessoajuridica` (
   `IDUSUARIO` int(11) NOT NULL,
-  `CNPJ` varchar(30) NOT NULL,
-  PRIMARY KEY (`IDUSUARIO`)
+  `CNPJ` varchar(30) NOT NULL
 );
 
 create table `pessoafisica` (
   `IDUSUARIO` int(11) NOT NULL,
-  `CPF` varchar(20) NOT NULL,
-  PRIMARY KEY (`IDUSUARIO`)
+  `CPF` varchar(20) NOT NULL
 );
 
 create table `usuario` (
@@ -20,6 +20,3 @@ create table `usuario` (
   `SENHA` varchar(100) NOT NULL,
   PRIMARY KEY (`IDUSUARIO`)
 );
-
-
-
